@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %} 
+<form action="/" id="commentfield">
+    <label for="idnumber"></label>
+    <input type="number" name="idnumber" id="idnumber">
+
+    <label for="emailadress"></label>
+    <input type="email" name="emailadress" id="emailadress">
+
+    <label for="phonenumber"></label>
+    <input type="tel" name="phonenumber" id="phonenumber">
+
+    <label for="comment"></label>
+    <input type="text" name="comment" id="comment">
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
