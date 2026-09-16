@@ -3,12 +3,12 @@
 {% block title %}Home{% endblock %}
 
 {% block content %} 
-<form action="/" id="commentfield">
+<form action="{{ url_for('post') }}" id="commentfield">
     <label for="idnumber"></label>
     <input type="number" name="idnumber" id="idnumber">
 
-    <label for="emailadress"></label>
-    <input type="email" name="emailadress" id="emailadress">
+    <label for="emailaddress"></label>
+    <input type="email" name="emailaddress" id="emailaddress">
 
     <label for="phonenumber"></label>
     <input type="tel" name="phonenumber" id="phonenumber">
