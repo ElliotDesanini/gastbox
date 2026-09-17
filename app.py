@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, json
+from datetime import datetime, timezone
 
 app = Flask(__name__)
 
@@ -12,12 +13,16 @@ def home():
 def board():
 
     with open("information.json", "r") as file:
-            comments = json.load(file)
+            information = json.load(file)
 
-    return render_template("board.html", comments = comments)
+    return render_template("board.html", information = information)
 
 @app.route("/post", methods=['POST'])
 def post():
+
+    timestamp = datetime.now(timezone.utc).isoformat(timespec='minutes')
+
+    username = request.form.get("username")
     idnumber = request.form.get("idnumber")
     emailaddress = request.form.get("emailaddress")
     phonenumber = request.form.get("phonenumber")
@@ -28,6 +33,8 @@ def post():
 
     comments.append(
          {
+              "username": f"{username}",
+              "timestamp": f"{timestamp}",
               "idnumber": f"{idnumber}",
               "emailaddress": f"{emailaddress}",
               "phonenumber": f"{phonenumber}",
@@ -35,7 +42,7 @@ def post():
          }
     )
 
-    with open("information.json", "a") as file:
+    with open("information.json", "w") as file:
         json.dump(comments, file, indent=4)
 
     return render_template("home.html")

@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block title %}Board{% endblock %}
+
+{% block content %}
+
+{%for info in information %}
+
+<hr>
+
+<h2>{{ info["username"] }} - {{ info["idnumber"] }}</h2>
+<h3>{{ info["timestamp"] }}</h3>
+<h3>{{ info["phonenumber"] }} - {{ info["emailaddress"] }}</h3>
+
+<p>{{ info["comment"] }}</p>
+
+<hr>
+
+{% endfor %}
+
+{% endblock %}
