@@ -1,0 +1,33 @@
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    align-self: center;
+    justify-self: center;
+    background-color: lightgray;
+    padding: 20px;
+    border: 3px solid gray;
+    border-radius: 12px;
+}
+
+form td[colspan="2"] {
+    text-align: center;
+}
+

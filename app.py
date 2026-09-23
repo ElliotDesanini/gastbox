@@ -3,6 +3,8 @@ from datetime import datetime, timezone
 
 app = Flask(__name__)
 
+information_file = "information.json"
+
 @app.route("/")
 def home():
 
@@ -12,7 +14,7 @@ def home():
 @app.route("/board")
 def board():
 
-    with open("information.json", "r") as file:
+    with open(information_file, "r") as file:
             information = json.load(file)
 
     return render_template("board.html", information = information)
@@ -28,7 +30,7 @@ def post():
     phonenumber = request.form.get("phonenumber")
     comment = request.form.get("comment")
 
-    with open("information.json", "r") as file:
+    with open(information_file, "r") as file:
         comments = json.load(file)
 
     comments.append(
@@ -42,7 +44,7 @@ def post():
          }
     )
 
-    with open("information.json", "w") as file:
+    with open(information_file, "w") as file:
         json.dump(comments, file, indent=4)
 
     return render_template("home.html")
