@@ -22,5 +22,29 @@
         "phonenumber": "0700012511",
         "timestamp": "2026-09-17T08:56+00:00",
         "username": "elliot"
+    },
+    {
+        "comment": "I LOVE PENERS",
+        "emailaddress": "EUPHRATES@RIVER",
+        "idnumber": "11111",
+        "phonenumber": "0.1",
+        "timestamp": "2026-09-23T12:07+00:00",
+        "username": "Hector.Allardh@skola.taby.se"
+    },
+    {
+        "comment": "riselman on tiktok",
+        "emailaddress": "admin.admin@admin.com",
+        "idnumber": "1337",
+        "phonenumber": "adminadmin",
+        "timestamp": "2026-09-23T12:10+00:00",
+        "username": "admin"
+    },
+    {
+        "comment": "Bra jobbat!",
+        "emailaddress": "holger@taby.se",
+        "idnumber": "007",
+        "phonenumber": "+46-123",
+        "timestamp": "2026-09-23T12:17+00:00",
+        "username": "Holger"
     }
 ]
